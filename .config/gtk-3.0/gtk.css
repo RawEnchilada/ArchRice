@@ -1,0 +1,9 @@
+.solid-csd headerbar .title {
+	font-size: 0;
+}
+
+window decoration {
+	margin: 0;
+	border: none;
+	padding: 0;
+}

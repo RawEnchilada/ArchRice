@@ -1,0 +1,26 @@
+{
+    "name": "Rapture",
+    "displayName": "Rapture",
+    "description": "Theme",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.46.0"
+    },
+    "categories": [
+        "Themes"
+    ],
+    "contributes": {
+        "themes": [
+            {
+                "label": "Steam",
+                "uiTheme": "vs-dark",
+                "path": "./themes/Steam.json"
+            },
+            {
+                "label": "Avia",
+                "uiTheme": "vs-dark",
+                "path": "./themes/Avia.json"
+            }
+        ]
+    }
+}

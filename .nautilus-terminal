@@ -1,0 +1,7 @@
+[general]
+def_term_height=5
+def_visible=1
+term_on_top=0
+
+[terminal]
+alacritty

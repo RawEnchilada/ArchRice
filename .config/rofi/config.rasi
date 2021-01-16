@@ -1,0 +1,3 @@
+configuration {
+	theme: "/home/enchilada/.local/share/rofi/themes/slate.rasi";
+}

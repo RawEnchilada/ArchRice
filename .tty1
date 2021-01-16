@@ -1,0 +1,8 @@
+#!/usr/bin/bash
+touch /run/user/1000/tty1started
+
+if [ -f /run/user/1000/tty1started ]  ; then
+ /usr/bin/agetty --noclear tty1 $TERM
+else
+ /usr/bin/agetty --autologin enchilada --noclear tty1 $TERM
+fi
