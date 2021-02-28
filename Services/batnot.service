@@ -1,0 +1,9 @@
+[Unit]
+Description=Battery notification sender
+
+[Service]
+ExecStart=/home/enchilada/.config/battery/notify.sh
+User=enchilada
+
+[Install]
+WantedBy=multi-user.target

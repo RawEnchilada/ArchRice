@@ -1,0 +1,13 @@
+swipe:
+  3:
+    left:
+      command: 'bspc desktop -f next'
+    right:
+      command: 'bspc desktop -f prev'
+    up:
+      command: 'bspc node -s biggest.window'
+
+threshold:
+  swipe: 0.1
+  pinch: 0.5
+  rotate: 0.5

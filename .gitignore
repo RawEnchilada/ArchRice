@@ -11,6 +11,11 @@
 !/.config/gtk-4.0
 !/.config/twmn
 !/.config/battery
+!/.config/fusuma/
+!/.config/fusuma/*
+!/Services/*
+!/Services/
+!/.bash_profile
 
 !/.vscode/
 /.vscode/*
@@ -34,3 +39,4 @@
 !/.xinitrc
 !/.profile
 !/.gitignore
+

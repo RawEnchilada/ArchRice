@@ -23,20 +23,39 @@ super + f
 	firefox
 
 #music
-super + F1
-	alacritty -e ncmpcpp
+super + m
+	alacritty -e ncmpcpp; nitrogen --restore
+	
+#discord
+super + d
+	discord
+	
+#ksys
+super + k
+	ksysguard
 
+#gparted
+super + g
+	gksu gparted
+
+#tor
+super + t
+	tor-browser
+
+#vbox
+super + v
+	virtualbox
 
 #
 # mutlimedia keys
 #
 
 #brightness Up
-F3
+alt + F3
 	xbacklight +5
 
 #brightness Down
-F2
+alt + F2
 	xbacklight -5
 
 # increase volume
@@ -65,15 +84,15 @@ XF86AudioPlay
 
 #screenshot
 Print
-	shotgun
+	gscreenshot
 
 #
 # System keys
 #
 
 #suspend
-XF86Launch3
-	betterlockscreen --suspend blur
+{XF86Launch3,super + x ; s}
+	betterlockscreen --suspend & betterlockscreen -u "/home/enchilada/Pictures/Lockscreens"
 
 #Shutdown
 super + x ; u
@@ -89,12 +108,52 @@ super + x ; b
 
 #lockscreen
 super + x ; l
-	betterlockscreen --lock blur
-
+	betterlockscreen --lock  & betterlockscreen -u "/home/enchilada/Pictures/Lockscreens"
 
 # make sxhkd reload its configuration files:
 super + alt + r
 	pkill -USR1 -x sxhkd
+
+#
+#bsp-layout hotkeys
+#
+
+#tall
+ctrl + super + 1
+	bsp-layout set tall -- --master-size 0.5
+
+#tall right
+ctrl + super + 4
+	bsp-layout set rtall -- --master-size 0.5
+	
+#wide
+ctrl + super + 2
+	bsp-layout set wide -- --master-size 0.5
+	
+#wide bottom
+ctrl + super + 3
+	bsp-layout set rwide -- --master-size 0.5
+	
+#grid horizontal
+ctrl + super + 7
+	bsp-layout set rgrid -- --master-size 0.5
+	
+#grid vertical
+ctrl + super + 6
+	bsp-layout set grid -- --master-size 0.5
+	
+#even
+ctrl + super + 5
+	bsp-layout set even -- --master-size 0.5
+	
+#tiled
+ctrl + super + 8
+	bsp-layout set tiled -- --master-size 0.5
+	
+#monocle
+ctrl + super + 9
+	bsp-layout set monocle -- --master-size 0.5
+
 
 #
 # bspwm hotkeys
@@ -176,20 +235,20 @@ super + {_,shift + }{1-9,0}
 #
 
 # preselect the direction
-super + ctrl + {h,j,k,l}
-	bspc node -p {west,south,north,east}
+#super + ctrl + {h,j,k,l}
+#	bspc node -p {west,south,north,east}
 
 # preselect the ratio
-super + ctrl + {1-9}
-	bspc node -o 0.{1-9}
+#super + ctrl + {1-9}
+#	bspc node -o 0.{1-9}
 
 # cancel the preselection for the focused node
-super + ctrl + space
-	bspc node -p cancel
+#super + ctrl + space
+#	bspc node -p cancel
 
 # cancel the preselection for the focused desktop
-super + ctrl + shift + space
-	bspc query -N -d | xargs -I id -n 1 bspc node id -p cancel
+#super + ctrl + shift + space
+#	bspc query -N -d | xargs -I id -n 1 bspc node id -p cancel
 
 #
 # move/resize

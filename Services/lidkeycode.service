@@ -1,0 +1,10 @@
+[Unit]
+Description=Set keycodes for laptop lid
+
+[Service]
+ExecStart=/usr/bin/sudo /usr/sbin/lidkeycode
+User=root
+Group=root
+
+[Install]
+WantedBy=multi-user.target

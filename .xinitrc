@@ -38,15 +38,25 @@ if [ -d /etc/X11/xinit/xinitrc.d ] ; then
  unset f
 fi
 
+file=$(find /home/enchilada/Pictures/Backgrounds/ -type f | shuf -n 1)
 
 xsetroot -cursor_name left_ptr &
 numlockx &
 setxkbmap hu &
-nitrogen --restore &
+nitrogen --set-zoom-fill $file --save &
 sxhkd &
 picom --experimental-backends &
+fusuma &
 mpd &
 twmnd &
-libinput-gestures-setup start &
-betterlockscreen --lock blur &
+
+
+if echo "$file" | grep 'dark'; then
+  polybar main -c $HOME/.config/polybar/light.ini &
+else
+  polybar main -c $HOME/.config/polybar/dark.ini &
+fi
+
+betterlockscreen --lock &
+betterlockscreen -u $HOME/Pictures/Lockscreens &
 exec bspwm

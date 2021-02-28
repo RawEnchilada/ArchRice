@@ -1,0 +1,8 @@
+[Unit]
+Description=Periodically running checks for battery.
+
+[Timer]
+OnCalendar=minutely
+
+[Install]
+WantedBy=timers.target
