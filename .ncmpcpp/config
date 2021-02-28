@@ -32,7 +32,7 @@
 ##
 mpd_music_dir = ~/Music
 #
-#mpd_crossfade_time = 5
+mpd_crossfade_time = 5
 #
 ##### music visualizer #####
 ##
@@ -278,7 +278,7 @@ visualizer_color = magenta
 ## Note: Custom command that will be executed each time song changes. Useful for
 ## notifications etc.
 ##
-#execute_on_song_change = ""
+execute_on_song_change =  /home/enchilada/.ncmpcpp/onChange.sh
 #
 ##
 ## Note: Custom command that will be executed each time player state
@@ -333,7 +333,7 @@ visualizer_color = magenta
 #
 ## Available values: classic, alternative.
 ##
-#user_interface = classic
+user_interface = classic
 #
 #data_fetching_delay = yes
 #
@@ -401,7 +401,7 @@ statusbar_visibility = yes
 ##
 ## Note: You can define startup screen by choosing screen from the list above.
 ##
-#startup_screen = playlist
+startup_screen = browser
 #
 ##
 ## Note: You can define startup slave screen by choosing screen from the list
