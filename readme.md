@@ -7,9 +7,12 @@
 - Compositor: picom/compton
 - Shortcuts: sxhkd
 - Lockscreen: Better LockScreen
-- Background: nitrogen (+ mountains.png)
+- Background: nitrogen 
 - App launcher: Rofi
 - Status bar: Polybar (elementary theme)
+
+Touchpad gestures with fusuma
+ncmpcpp changes background according to songs
 
 # Preview:
 
